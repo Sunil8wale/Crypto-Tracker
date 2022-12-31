@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Crypto Tracker</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <div class="container">
+      <!--to center the content-->
+      <div class="row justify-content-center">
+        <!--this will keep it in center (div part)-->
+        <h1 class="col-md-7 text-center">Crypto Tracker</h1>
+        <h4 class="col-md-7 text-center">By Sunil</h4>
+        <div class="col-md-6 m-5 row justify-content-center">
+          <div class="col-10" style="background-color: orange">
+            <form action="" id="searchForm">
+              <div class="form-row">
+                <div class="col-12 form group">
+                  <label for="xyz" style="color: black"><b>coin type</b></label>
+                  <select name="coinType" class="form-control" id="xyz">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="polkadot">Polkadot</option>
+                    <option value="tether">Tether</option>
+                  </select>
+                </div>
+              </div>
+              <!--btn primary for colouring the button and col-12 for the to spred over complete area-->
+              <button type="submit" class="col-12 btn btn-primary">
+                Get Price
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-7 text-center row justify-content-center">
+          <!--this will display the table means props and values in table
+    m for margin-->
+          <table class="col-md-7 m-2" border="1px" id="tableResult"></table>
+        </div>
+      </div>
+    </div>
+    <!--for fetching the apis using axios///Promise based HTTP client for the browser and node.js-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+<!--https://api.cryptonator.com/api/ticker/btc-usd-->
+<!--for this api we get error bcz we are using free api without server-->
